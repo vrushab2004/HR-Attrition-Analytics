@@ -4,7 +4,7 @@ An end-to-end HR analytics solution built on Microsoft Fabric, answering a singl
 
 The project ingests 1,470 employee records, transforms them into a governed Delta lakehouse, models them into a semantic layer, and serves a two-page Power BI report over DirectLake — with column-level security, row-level security, and sensitivity labels applied so HR data stays protected in the hands of the people who should see it.
 
-![Overview page](screenshots/report-overview.png)
+![Overview page](report-overview.png)
 
 ---
 
@@ -118,7 +118,7 @@ Conditional formatting rules drive the red/amber/green colour logic on the rate 
 
 ### Overview — the headline picture
 
-![Overview page](screenshots/report-overview.png)
+![Overview page](report-overview.png)
 
 | KPI | Value |
 |---|---|
@@ -132,7 +132,7 @@ Visuals: KPI cards, stayed-vs-left proportion bar, attrition rate by department,
 
 ### Deep Dive — the drivers
 
-![Deep Dive page](screenshots/report-deep-dive.png)
+![Deep Dive page](report-deep-dive.png)
 
 Breakdowns by age group, gender, education field, marital status, business travel frequency, and overtime — the six dimensions that separate leavers from stayers most sharply.
 
@@ -156,7 +156,7 @@ Breakdowns by age group, gender, education field, marital status, business trave
 
 Governance was treated as a first-class requirement, not an afterthought — HR data is among the most sensitive data an organisation holds.
 
-![Column-level security](screenshots/onelake-cls.png)
+![Column-level security](onelake-cls.png)
 
 ### Column-Level Security (OneLake Security)
 A `DefaultReader` role is defined at the lakehouse level with Read permission, with CLS constraints applied to the `hr_employees` table. Sensitive compensation and personal attributes are masked from the role, so users querying through the SQL analytics endpoint or Spark cannot see columns they aren't entitled to — the restriction lives with the data in OneLake, not just in the report.
