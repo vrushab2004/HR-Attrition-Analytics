@@ -180,35 +180,12 @@ A **Confidential** sensitivity label is applied and inherited downstream through
 
 ```
 ├── README.md
-├── notebooks/
-│   └── hr_transformation.ipynb      # PySpark transformation logic
-├── dataflows/
-│   └── dataflow_gen2_hr.json        # Dataflow Gen2 export
-├── semantic-model/
-│   └── measures.dax                 # DAX measure definitions
-├── report/
-│   └── HR_Attrition.pbix            # Power BI report
-├── data/
-│   └── WA_Fn-UseC_-HR-Employee-Attrition.csv
+├── .gitignore
 └── screenshots/
     ├── report-overview.png
     ├── report-deep-dive.png
     └── onelake-cls.png
 ```
-
----
-
-## Reproducing This Project
-
-1. Create a Fabric workspace with a capacity or trial enabled.
-2. Create a Lakehouse (`lh_HR`).
-3. Download the IBM HR Attrition dataset from Kaggle and land it via Dataflows Gen2 into the lakehouse.
-4. Run the notebook in `notebooks/` to build the curated Delta tables.
-5. Create a semantic model over the curated tables in DirectLake mode and add the measures from `semantic-model/measures.dax`.
-6. Open the `.pbix` in `report/`, repoint it at your semantic model, and publish.
-7. Configure the OneLake security role and RLS mapping table against your own tenant's user principal names.
-
----
 
 ## What I Took Away From This
 
